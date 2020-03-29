@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Setlist JSON</title>
+	
+<style>
+	
+	body {background-color: #373737; color: white; font-size: 30px}
+	
+	.title {color: #22BD37; text-decoration: underline; font-size: 45px; text-align: center}
+	
+	.instructions {color: #22BD37}
+	
+</style>
+</head>
+<body>
+
+	<div class="title">Setlist</div>
+	<br>
+
+	<div class="dropdown">
+
+  		<div class="instructions">Filter songs by genre: </div>
+  			<select name="genres" onchange = "filter_songs()">
+	 			<option value="select">-select genre-</option>
+	 			<option value="hip-hop">Hip-Hop</option>
+	  			<option value="rap">Rap</option>
+	  			<option value="r&b">R&B</option>
+  			</select>
+	
+		<div id="filtered_songs"></div>
+  
+  		<hr>
+	</div>
+	
+	<br>
+	<br>
+
+<script>
+	
+function filter_songs()
+	{
+		var selected_genre = document.getElementsByName("genres")[0].value;
+		
+		if (selected_genre == "rap")
+			{
+				document.getElementById("filtered_songs").innerHTML = "<br>" + song4_string + "<br>" + "<br>" + song8_string;
+			}
+		if (selected_genre == "r&b")
+			{
+				document.getElementById("filtered_songs").innerHTML = "<br>" + song1_string + "<br>" + "<br>" + song10_string;
+			}
+		if (selected_genre == "hip-hop")
+			{
+				document.getElementById("filtered_songs").innerHTML = "<br>" + song2_string + "<br>" + "<br>" + song3_string + "<br>" + "<br>" + song5_string + "<br>" + "<br>" + song6_string + "<br>" + "<br>" + song7_string + "<br>" + "<br>" + song9_string;
+			}
+	}
+
+		song_1 = {
+			"artist" : ["The Weeknd"],
+			"title" : "Blinding Lights",
+			"genre" : ["R&B"],
+			"year" : "2020",
+			toJSON() {return "Artist: " + this.artist + "<br>" + "Title: " + this.title + "<br>" + "Genre: " + this.genre + "<br>" + "Year: " + this.year}
+		}
+		
+		song_2 = {
+			"artist" : ["Lil Uzi Vert", " Syd"],
+			"title" : "Urgency",
+			"genre" : ["Hip-Hop"],
+			"year" : "2020",
+			toJSON() {return "Artist: " + this.artist + "<br>" + "Title: " + this.title + "<br>" + "Genre: " + this.genre + "<br>" + "Year: " + this.year}
+		}
+		
+		song_3 = {
+			"artist" : ["Chief Keef", " Kanye West"],
+			"title" : "Nobody",
+			"genre" : ["Hip-Hop"],
+			"year" : "2015",
+			toJSON() {return "Artist: " + this.artist + "<br>" + "Title: " + this.title + "<br>" + "Genre: " + this.genre + "<br>" + "Year: " + this.year}
+		}
+		
+		song_4 = {
+			"artist" : ["$NOT", " Wifiisfuneral"],
+			"title" : "BERETTA",
+			"genre" : ["Rap"],
+			"year" : "2020",
+			toJSON() {return "Artist: " + this.artist + "<br>" + "Title: " + this.title + "<br>" + "Genre: " + this.genre + "<br>" + "Year: " + this.year}
+		}
+		
+		song_5 = {
+			"artist" : ["dopeSMOOTHIES", " SZN"],
+			"title" : "105.9",
+			"genre" : ["Hip-Hop"],
+			"year" : "2020",
+			toJSON() {return "Artist: " + this.artist + "<br>" + "Title: " + this.title + "<br>" + "Genre: " + this.genre + "<br>" + "Year: " + this.year}
+		}
+		
+		song_6 = {
+			"artist" : ["K Suave", " Azzuzi"],
+			"title" : "AvatarWorld",
+			"genre" : ["Hip-Hop"],
+			"year" : "2018",
+			toJSON() {return "Artist: " + this.artist + "<br>" + "Title: " + this.title + "<br>" + "Genre: " + this.genre + "<br>" + "Year: " + this.year}
+		}
+		
+		song_7 = {
+			"artist" : ["YNW Melly", " Yung Bans"],
+			"title" : "100 Shells",
+			"genre" : ["Hip-Hop"],
+			"year" : "2019",
+			toJSON() {return "Artist: " + this.artist + "<br>" + "Title: " + this.title + "<br>" + "Genre: " + this.genre + "<br>" + "Year: " + this.year}
+		}
+		
+		song_8 = {
+			"artist" : ["Migos"],
+			"title" : "Made Men",
+			"genre" : ["Rap"],
+			"year" : "2018",
+			toJSON() {return "Artist: " + this.artist + "<br>" + "Title: " + this.title + "<br>" + "Genre: " + this.genre + "<br>" + "Year: " + this.year}
+		}
+		
+		song_9 = {
+			"artist" : ["Danger Incorporated"],
+			"title" : "Diamonds",
+			"genre" : ["Hip-Hop"],
+			"year" : "2017",
+			toJSON() {return "Artist: " + this.artist + "<br>" + "Title: " + this.title + "<br>" + "Genre: " + this.genre + "<br>" + "Year: " + this.year}
+		}
+		
+		song_10 = {
+			"artist" : ["Curren$y"],
+			"title" : "Sixty-Seven Turbo Jet",
+			"genre" : ["Hip-Hop"],
+			"year" : "2018",
+			toJSON() {return "Artist: " + this.artist + "<br>" + "Title: " + this.title + "<br>" + "Genre: " + this.genre + "<br>" + "Year: " + this.year}
+		}
+		
+		song1_string = JSON.stringify(song_1);
+		song2_string = JSON.stringify(song_2);
+		song3_string = JSON.stringify(song_3);
+		song4_string = JSON.stringify(song_4);
+		song5_string = JSON.stringify(song_5);
+		song6_string = JSON.stringify(song_6);
+		song7_string = JSON.stringify(song_7);
+		song8_string = JSON.stringify(song_8);
+		song9_string = JSON.stringify(song_9);
+		song10_string = JSON.stringify(song_10);
+		
+		document.write (song1_string + "<br>" + "<br>" + song2_string + "<br>" + "<br>"+ song3_string + "<br>" + "<br>" + song4_string + "<br>" + "<br>" + song5_string + "<br>" + "<br>" + song6_string + "<br>" + "<br>" + song7_string + "<br>" + "<br>" + song8_string + "<br>" + "<br>" + song9_string + "<br>" + "<br>" + song10_string);
+</script>
+
+</body>
+</html>
