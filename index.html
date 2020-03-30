@@ -45,7 +45,7 @@ function filter_songs()
 		
 		if (selected_genre == "rap")
 			{
-				document.getElementById("filtered_songs").innerHTML = "<br>" + song4_string + "<br>" + "<br>" + song8_string;
+				document.getElementById("filtered_songs").innerHTML = "<br>" + song4_string + "<br>" + "<br>" + song8_string + "<br>" + "<br>" + song10_string;
 			}
 		if (selected_genre == "r&b")
 			{
@@ -53,7 +53,7 @@ function filter_songs()
 			}
 		if (selected_genre == "hip-hop")
 			{
-				document.getElementById("filtered_songs").innerHTML = "<br>" + song2_string + "<br>" + "<br>" + song3_string + "<br>" + "<br>" + song5_string + "<br>" + "<br>" + song6_string + "<br>" + "<br>" + song7_string + "<br>" + "<br>" + song9_string;
+				document.getElementById("filtered_songs").innerHTML = "<br>" + song2_string + "<br>" + "<br>" + song3_string + "<br>" + "<br>" + song5_string + "<br>" + "<br>" + song6_string + "<br>" + "<br>" + song7_string + "<br>" + "<br>" + song8_string + "<br>" + "<br>" + song9_string;
 			}
 	}
 
@@ -116,7 +116,7 @@ function filter_songs()
 		song_8 = {
 			"artist" : ["Migos"],
 			"title" : "Made Men",
-			"genre" : ["Rap"],
+			"genre" : ["Hip-Hop", " Rap"],
 			"year" : "2018",
 			toJSON() {return "Artist: " + this.artist + "<br>" + "Title: " + this.title + "<br>" + "Genre: " + this.genre + "<br>" + "Year: " + this.year}
 		}
@@ -132,7 +132,7 @@ function filter_songs()
 		song_10 = {
 			"artist" : ["Curren$y"],
 			"title" : "Sixty-Seven Turbo Jet",
-			"genre" : ["Hip-Hop"],
+			"genre" : ["R&B", " Rap"],
 			"year" : "2018",
 			toJSON() {return "Artist: " + this.artist + "<br>" + "Title: " + this.title + "<br>" + "Genre: " + this.genre + "<br>" + "Year: " + this.year}
 		}
